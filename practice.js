@@ -190,7 +190,9 @@ that each value is truthy. If it's not truthy, remove it from the object. */
   //Code Here
 for(key in user1){
   if(!user1[key]){
-    delete user1[key];
+    delete user1[key];//GG: You need to target the key when you use delete rather than the value (you are referencing the value).
+    //GG: So it should be:
+    //delete key;
   }
 }
 //Once you get your truthy Object, Change the remaining values in the object to be specific to you (name: 'your name', username: 'your username'), rather than my information.
